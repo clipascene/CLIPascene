@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta property="og:title" content="CLIPasso: Semantically-Aware Object Sketching"/>
+  <meta property="og:url" content="https://clipasso.github.io/clipasso/"/>
+  <meta property="og:image" content="static/images/og_tag_header_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <title>CLIPascene: Scene Sketching with Different Types and Levels of Abstraction</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="icon" href="static/figures/icon2.png">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="publication-header">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- <div class="columns is-centered"> -->
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CLIPascene: Scene Sketching with Different Types and Levels of Abstraction</h1>
+        </div>
+    </div>
+  </div>   
+</section>
+
+<section class="publication-author-block">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://yaelvi116.wixsite.com/mysite" target="_blank">Yael Vinker</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://yuval-alaluf.github.io/" target="_blank">Yuval Alaluf</a><sup>1</sup>,</span>
+           
+            <span class="author-block"><a href="https://danielcohenor.com/" target="_blank">Daniel Cohen-Or</a><sup>1</sup>,</span>
+            
+            <span class="author-block"><a href="https://faculty.idc.ac.il/arik/site/index.asp" target="_blank">Ariel Shamir</a><sup>2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tel Aviv University, <sup>2</sup>Reichman University</span> 
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              </span>
+              <span class="link-block">
+                <a href="https://github.com" target="_blank"
+                class="external-link button is-normal is-rounded">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+              </span>
+           
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <!-- <div class="hero-body"> -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+      <div class="container">
+      <div class="item">
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/new/teaser_4.png" alt="clipasso"/>
+      </div>
+      <h2 class="subtitle">
+        <center>
+    Our method converts a <b>scene</b> image into a sketch with different types of abstractions by disentangling abstraction into two axes of control: <b>fidelity</b> and <b>simplicity</b>.
+    We produce a whole matrix of sketches per image, from which users can select the desired sketch based on their goals and personal taste.
+    </center>
+      </h2>
+    </div>
+  </div>
+ <!--  </div> -->
+  </div>
+  </div>
+ <!--  </div> -->
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="item">
+          <p style="margin-bottom: 30px">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/figures/video.mp4"
+          type="video/mp4">
+        </video>
+        </p>
+        </div>
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            At the core of sketching is the notion of abstraction, requiring the artist to convey a complex subject with a minimal representation.
+            In this paper, we present a method for converting a given <b>scene</b> image into a sketch using different <b>types</b> and multiple <b>levels</b> of abstraction. We distinguish between two types of abstraction. <br>
+            The first considers the <b>fidelity</b> of the sketch, varying its representation from a more precise portrayal of the input to a looser depiction.
+            The second is defined by the visual <b>simplicity</b> of the sketch, moving from a detailed depiction to a sparse sketch. <br>
+            Using an explicit disentanglement into two abstraction axes --- and multiple levels for each one --- provides users additional control over selecting the desired sketch based on their personal goals and preferences. <br>
+            To form a sketch at a given level of fidelity and simplification, we train two MLP networks. <br>
+            The first network learns the desired placement of strokes, while the second network learns to gradually remove strokes from the sketch without harming its recognizability and semantics. <br>
+            Our approach is able to generate sketches of complex scenes including those with complex backgrounds (\eg natural and urban settings) and subjects (\eg animals and people) while depicting gradual abstractions of the input scene in terms of fidelity and simplicity.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h2 class="title has-text-centered">Scene Sketches Results</h2> -->
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/bull.png" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/arch.png" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/ballerina.png" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/bird.png" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/boat.png" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/man_cam.png" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/woman_city.png" alt="cars peace"/>
+      </div>
+      
+     
+    
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How does it work?</h2>
+        <div class="content has-text-justified">
+          <p>
+            Given an input image I of a scene, our goal is to produce a set of corresponding sketches at different levels of abstraction in terms of both its <i>fidelity</i> and <i>simplicity</i>. 
+
+            We begin by producing a set of sketches at multiple levels of abstraction along the fidelity axis, with no simplification, thus forming the top row (highlighted in blue) in the abstractions matrix. Next, for each sketch at a given level of fidelity, we perform an iterative visual simplification (highlighted in orange) by learning how to best remove select strokes and adjust the locations of the remaining strokes.
+            This process results in an abstraction matrix representing various abstractions of the complete scene.
+
+            </p>
+        </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/pipeline_h.png" width="500" height="600"/>
+      </div>
+        <div class="content has-text-justified">
+          <p>
+
+            We define a sketch as a set of <i>n</i> black strokes placed over a white background, and train a simple multilayer perceptron (MLP-loc) network to map an initial set of stroke parameters to their final locations forming a single sketch.
+            The training process is done per image (e.g. withtout external dataset), and is guided by a pre-trained CLIP-ViT model, leveraging its powerful ability to capture the semantics and global context of the entire scene.
+            </p>
+        </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/pipeline.png"  width="500" height="600"/>
+      </div>
+      <div class="content has-text-justified">
+          <p>
+            To realize the fidelity axis, we utilize different intermediate layers of CLIP-ViT to guide the training process, where shallow layers preserve the geometry of the image and deeper layers encourage the creation of looser sketches that rely more on the semantics of the scene.
+            To realize the \emph{simplicity} axis, we jointly train an additional MLP network (MLP-simp) that learns how to best discard strokes without harming the meaning and recognizability of the sketch.
+            The use of the networks over a direct optimization-based approach is crucial for achieving a <i>learned</i> simplification of the sketch. 
+
+
+            
+          </p>
+        
+        
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section> 
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title has-text-centered">Editing the Brush Style on SVGs</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/stroke_style.png" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/bird_stroke_style.png" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/manflowers_style.png" alt="cars peace"/>
+      </div>
+      
+  </div>
+</div>
+</div>
+</section>
+
+
+
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{vinker2022clipasso,
+      title={CLIPasso: Semantically-Aware Object Sketching}, 
+      author={Yael Vinker and Ehsan Pajouheshgar and Jessica Y. Bo and Roman Christian Bachmann and Amit Haim Bermano and Daniel Cohen-Or and Amir Zamir and Ariel Shamir},
+      year={2022},
+      eprint={2202.05822},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR}
+      }</code></pre>
+    </div>
+</section>
+ -->
+
+
+<footer class="footer">
+ <!--  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+      href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+      <i class="fas fa-file-pdf"></i>
+    </a>
+    <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <i class="fab fa-github"></i>
+    </a>
+  </div> -->
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          This website is licensed under a <a rel="license"
+          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>
+        Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If you want to reuse their <a
+        href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+
+
+  <script type="text/javascript">
+    var sc_project=12351448; 
+    var sc_invisible=1; 
+    var sc_security="c676de4f"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/12351448/0/c676de4f/1/"
+    alt="Web Analytics"></a></div></noscript>
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
